@@ -1,0 +1,46 @@
+﻿stop();
+
+Selection.setFocus("input_txt");
+
+var prefixo:String = "";
+
+// Create listener object.
+var rbListener:Object = new Object();
+rbListener.click = function(evt_obj:Object)
+{
+	if (radioGroup.selection.data == 1) 
+	{
+		prefixo = "http://mkt.tedbrasil.com";
+	}
+	else
+	{
+		prefixo = "http://validacoes.tlsbr.com";
+	}
+};
+
+// Add listener.ll
+radioGroup.addEventListener("click",rbListener);
+
+montar_btn.onPress = function()
+{
+	montarLinks();
+};
+
+limpar_btn.onPress = function()
+{
+	output_txt.text = "";
+	input_txt.text = "";
+};
+
+function montarLinks():Void
+{
+	output_txt.text = "";// limpa o campo de saída
+	var my_str:String = input_txt.text;
+	var my_array:Array = my_str.split("+");
+
+	for (var i = 0; i < my_array.length; i++)
+	{
+		trace(my_array[i]);
+		output_txt.text += prefixo + my_array[i] + "<br/>";
+	}
+}
