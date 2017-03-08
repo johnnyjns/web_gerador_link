@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="bootstrap-3.3.7-dist/css/bootstrap.css">
+    <script src="jquery-3.1.1-dist/jquery-3.1.1.js" charset="utf-8"></script>
+    <script src="bootstrap-3.3.7-dist/js/bootstrap.js" charset="utf-8"></script>
+    <title>Web - Gerador de Link</title>
+  </head>
+  <body>
+    <form class="form-signin" action="" method="post">
+      <h2>Gerador de Link da TED Brasil</h2>
+      <fieldset>
+        <legend>Informação para geração do link:</legend><br>
+        Caminho(s):<br>
+        <textarea name="origem" rows="6" cols="80"></textarea><br><br>
+        Selecione o FTP destino:<br>
+        <input type="radio" name="prefixo" value="mkt">Marketing(MKT)
+        <input type="radio" name="prefixo" value="valid">Validações<br><br>
+        Link(s) gerado(s):<br>
+        <textarea name="destino" rows="6" cols="80"></textarea><br><br>
+        <input type="reset" name="" value="Limpar">
+        <input type="submit" name="" value="Gerar Link(s)">
+      </fieldset>
+    </form>
+  </body>
+</html>
